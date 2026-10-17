@@ -28,14 +28,14 @@
     <div class="brand">Aurora</div>
     <h1>Aurora for Windows</h1>
     <p>Download the Windows x64 desktop app. This release connects to the live Aurora service and requires an internet connection and an Aurora account.</p>
-    <div class="meta">Windows 10/11 · x64 · ZIP · 151 MB<br>This desktop shell does not run tasks on your local computer.</div>
+    <div class="meta">Windows 10/11 · x64 · ZIP · v1.0.1 · 151 MB<br>This desktop shell does not run tasks on your local computer.</div>
     <button id="download">Download for Windows</button>
     <p id="status" aria-live="polite"></p>
     <details>
       <summary>Having trouble?</summary>
       <p>Download both parts, place them in the same folder, then run this command in PowerShell to rebuild the ZIP:</p>
-      <a href="./release-parts/Aurora-Windows-x64.zip.part-01?v=51883ea">Part 1</a> ·
-      <a href="./release-parts/Aurora-Windows-x64.zip.part-02?v=51883ea">Part 2</a>
+      <a href="./release-parts/Aurora-Windows-x64.zip.part-01?v=92a7f152">Part 1</a> ·
+      <a href="./release-parts/Aurora-Windows-x64.zip.part-02?v=92a7f152">Part 2</a>
       <code>cmd /c copy /b Aurora-Windows-x64.zip.part-01+Aurora-Windows-x64.zip.part-02 Aurora-Windows-x64.zip</code>
     </details>
   </main>
@@ -43,8 +43,8 @@
     const button = document.querySelector('#download');
     const status = document.querySelector('#status');
     const parts = [
-      './release-parts/Aurora-Windows-x64.zip.part-01?v=51883ea',
-      './release-parts/Aurora-Windows-x64.zip.part-02?v=51883ea'
+      './release-parts/Aurora-Windows-x64.zip.part-01?v=92a7f152',
+      './release-parts/Aurora-Windows-x64.zip.part-02?v=92a7f152'
     ];
     button.addEventListener('click', async () => {
       button.disabled = true;
