@@ -36,8 +36,8 @@
     <details>
       <summary>Having trouble?</summary>
       <p>Download both parts, place them in the same folder, then run this command in PowerShell to rebuild the ZIP:</p>
-      <a href="./release-parts/v1.2.0/Aurora-Windows-x64.zip.part-01?v=1.2.0">Part 1</a> ·
-      <a href="./release-parts/v1.2.0/Aurora-Windows-x64.zip.part-02?v=1.2.0">Part 2</a>
+      <a href="https://raw.githubusercontent.com/EduardAdmin/aurora-repo/main/release-parts/v1.2.0/Aurora-Windows-x64.zip.part-01">Part 1</a> ·
+      <a href="https://raw.githubusercontent.com/EduardAdmin/aurora-repo/main/release-parts/v1.2.0/Aurora-Windows-x64.zip.part-02">Part 2</a>
       <code>cmd /c copy /b Aurora-Windows-x64.zip.part-01+Aurora-Windows-x64.zip.part-02 Aurora-Windows-Velo-1.2.0.zip</code>
     </details>
   </main>
@@ -45,8 +45,8 @@
     const button = document.querySelector('#download');
     const status = document.querySelector('#status');
     const parts = [
-      './release-parts/v1.2.0/Aurora-Windows-x64.zip.part-01?v=1.2.0',
-      './release-parts/v1.2.0/Aurora-Windows-x64.zip.part-02?v=1.2.0'
+      'https://raw.githubusercontent.com/EduardAdmin/aurora-repo/main/release-parts/v1.2.0/Aurora-Windows-x64.zip.part-01',
+      'https://raw.githubusercontent.com/EduardAdmin/aurora-repo/main/release-parts/v1.2.0/Aurora-Windows-x64.zip.part-02'
     ];
     button.addEventListener('click', async () => {
       button.disabled = true;
