@@ -20,6 +20,7 @@
     details { margin-top: 22px; color: #aeb4c4; font-size: 13px; }
     a { color: #aac4ff; }
     code { display: block; margin-top: 10px; padding: 12px; overflow-wrap: anywhere; border-radius: 10px; background: #090a0f; color: #d7d9e0; }
+    .checksum { overflow-wrap: anywhere; font-size: 11px; }
     @media (max-width: 480px) { main { padding: 28px 22px; border-radius: 22px; } }
   </style>
 </head>
@@ -27,24 +28,25 @@
   <main>
     <div class="brand">Aurora</div>
     <h1>Aurora for Windows</h1>
-    <p>Download the Windows x64 desktop app. This release connects to the live Aurora service and requires an internet connection and an Aurora account.</p>
-    <div class="meta">Windows 10/11 · x64 · ZIP · v1.0.1 · 151 MB<br>This desktop shell does not run tasks on your local computer.</div>
+    <p>Download Aurora for Windows and keep your selected Velo orb on screen. The app connects to the live Aurora service and requires an internet connection and an Aurora account.</p>
+    <div class="meta">Windows 10/11 · x64 · ZIP · v1.2.0 · 151 MB<br>The floating orb chats in your active Velo conversation. This preview does not autonomously run commands or edit local files.</div>
     <button id="download">Download for Windows</button>
     <p id="status" aria-live="polite"></p>
+    <p class="checksum">SHA-256: 3f9461d77cb9eb244c3acdfc094a525975b6eb028138c649648cf8ec6b38a72f</p>
     <details>
       <summary>Having trouble?</summary>
       <p>Download both parts, place them in the same folder, then run this command in PowerShell to rebuild the ZIP:</p>
-      <a href="./release-parts/Aurora-Windows-x64.zip.part-01?v=92a7f152">Part 1</a> ·
-      <a href="./release-parts/Aurora-Windows-x64.zip.part-02?v=92a7f152">Part 2</a>
-      <code>cmd /c copy /b Aurora-Windows-x64.zip.part-01+Aurora-Windows-x64.zip.part-02 Aurora-Windows-x64.zip</code>
+      <a href="./release-parts/v1.2.0/Aurora-Windows-x64.zip.part-01?v=1.2.0">Part 1</a> ·
+      <a href="./release-parts/v1.2.0/Aurora-Windows-x64.zip.part-02?v=1.2.0">Part 2</a>
+      <code>cmd /c copy /b Aurora-Windows-x64.zip.part-01+Aurora-Windows-x64.zip.part-02 Aurora-Windows-Velo-1.2.0.zip</code>
     </details>
   </main>
   <script>
     const button = document.querySelector('#download');
     const status = document.querySelector('#status');
     const parts = [
-      './release-parts/Aurora-Windows-x64.zip.part-01?v=92a7f152',
-      './release-parts/Aurora-Windows-x64.zip.part-02?v=92a7f152'
+      './release-parts/v1.2.0/Aurora-Windows-x64.zip.part-01?v=1.2.0',
+      './release-parts/v1.2.0/Aurora-Windows-x64.zip.part-02?v=1.2.0'
     ];
     button.addEventListener('click', async () => {
       button.disabled = true;
@@ -58,7 +60,7 @@
         const href = URL.createObjectURL(zip);
         const anchor = document.createElement('a');
         anchor.href = href;
-        anchor.download = 'Aurora-Windows-x64.zip';
+        anchor.download = 'Aurora-Windows-Velo-1.2.0.zip';
         document.body.appendChild(anchor);
         anchor.click();
         anchor.remove();
